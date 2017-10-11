@@ -1,7 +1,7 @@
 //1
 btn.onclick = function(){
     var val = document.getElementById('inp').value;
-    console.log(val.length);
+    alert("length of string = " + val.length);
 }
 
 //2
@@ -17,7 +17,7 @@ for (var key in imgFlw){
 out1.innerHTML = str;
 
 //3 - 4
-adress.onblur = function(){
+document.getElementById('btn3-4').onclick = function(){
     var val = adress.value;  
     if (val.substring(0,12) == 'https://www.'){
         var str_new = val.substring(12);
@@ -46,17 +46,17 @@ btnForm.onclick = function(){
     if (password.length >= 5 && email.includes('@') && !email.includes(' ')){
         name.trim();
         surname.trim();
-        alert('true');
+        alert('Welcom!');
         return true;
     }
     else{
-        alert('false');
+        alert('please enter correct values');
         return false;
     }
 }
 
 
 //6
-code.onblur = function(){
+document.getElementById('btn6').onclick = function(){
     out3.innerHTML = code.value.charCodeAt();
 }
